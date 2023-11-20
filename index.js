@@ -71,7 +71,7 @@ document.addEventListener('DOMContentLoaded', () => {
         uploadData.append('image', image);
 
         try {
-            const response = await fetch('https://bistro-boss-server-v2.vercel.app/api/v1/images/upload', {
+            const response = await fetch('http://localhost:5000/api/v1/images/upload', {
                 method: 'POST',
                 body: uploadData
             });
@@ -204,7 +204,7 @@ document.addEventListener('DOMContentLoaded', () => {
             const formData = new FormData(imageForm);
             formData.append('croppedImage', croppedImageData);
 
-            const response = await fetch('https://bistro-boss-server-v2.vercel.app/api/v1/images/upload', {
+            const response = await fetch('http://localhost:5000/api/v1/images/upload', {
                 method: 'POST',
                 body: formData,
             });
